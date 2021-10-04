@@ -1,0 +1,154 @@
+.profile-form {
+  margin: 0 auto 2rem auto;
+  background-color: #1f3e42;
+  border-radius: 1rem;
+  height: 49rem;
+  width: 80rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.profile-form > h3 {
+  font-size: 4rem;
+  font-weight: 100;
+  letter-spacing: 1rem;
+  border-bottom: 0.1rem solid #ccc;
+}
+
+.profile-form > div {
+  width: 70rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-form > div > label {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.profile-form > div > input {
+  width: 45rem;
+  height: 3rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  outline: none;
+  border: none;
+}
+
+.profile-form > div > input:active,
+.profile-form > div > input:focus {
+  border: 0.3rem solid #d4ecdd;
+}
+
+.profile-form > div > input::placeholder {
+  letter-spacing: 1rem;
+  transition: all 0.2s;
+}
+
+.profile-form > div > input:active::placeholder,
+.profile-form > div > input:focus::placeholder {
+  letter-spacing: 0rem;
+}
+
+.profile-form > div:last-of-type > button {
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.6rem;
+  background-color: #112031;
+  padding: 1.7rem 6rem;
+  margin: 0 auto;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.profile-form > div:last-of-type > button span {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-form > div:last-of-type > button:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+  background: #b4d6c1;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.profile-form > div:last-of-type > button:hover:after {
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+/* -------------------------------------------------- MEDIA QUERIES -------------------------------------------------- */
+
+@media only screen and (max-width: 56.25em) {
+  .profile-form {
+    width: 64rem;
+  }
+
+  .profile-form > h3 {
+    font-size: 3rem;
+  }
+
+  .profile-form > div {
+    width: 57rem;
+  }
+
+  .profile-form > div > label {
+    letter-spacing: 0.4rem;
+  }
+
+  .profile-form > div > input {
+    width: 35rem;
+    height: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .profile-form {
+    width: 39rem;
+  }
+
+  .profile-form > h3 {
+    font-size: 2.5rem;
+  }
+
+  .profile-form > div {
+    width: 36rem;
+  }
+
+  .profile-form > div > label {
+    font-size: 1.5rem;
+    letter-spacing: 0rem;
+  }
+
+  .profile-form > div > input {
+    width: 22rem;
+    font-size: 1.4rem;
+  }
+
+  .profile-form > div > input::placeholder {
+    letter-spacing: 0.5rem;
+    font-size: 1.3rem;
+  }
+
+  .profile-form > div > input:active::placeholder,
+  .profile-form > div > input:focus::placeholder {
+    letter-spacing: 0rem;
+  }
+
+  .profile-form > div:last-of-type > button {
+    font-size: 1.4rem;
+  }
+}

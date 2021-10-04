@@ -1,0 +1,48 @@
+.load-wrapp {
+  position: fixed;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 1000rem;
+  background-color: #33333380;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.line {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 11.5rem;
+  background-color: #59405c;
+  box-shadow: 0 0 0.4rem 0.15rem #ae99b3, 0 0 0.6rem 0.3rem #ae99b3,
+    0 0 0.7rem 0.65rem #ae99b3;
+}
+
+.load-2 .line:nth-last-child(1) {
+  animation: loadingB 1.5s 1s infinite;
+}
+.load-2 .line:nth-last-child(2) {
+  animation: loadingB 1.5s 0.5s infinite;
+}
+.load-2 .line:nth-last-child(3) {
+  animation: loadingB 1.5s 0s infinite;
+}
+
+@keyframes loadingB {
+  0% {
+    width: 15px;
+  }
+  50% {
+    width: 35px;
+  }
+  100% {
+    width: 15px;
+  }
+}

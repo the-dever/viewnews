@@ -1,0 +1,146 @@
+.currency-container {
+  border-radius: 0.5rem;
+  align-self: center;
+  margin-top: 15rem;
+  width: 100%;
+  background: linear-gradient(to bottom right, #8a759e, #5e4f6b);
+  min-height: 65rem;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.currency-tab {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 1.5rem 10rem;
+  color: #ccc;
+  position: relative;
+  letter-spacing: 0.5rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 5rem;
+  overflow: hidden !important;
+  transition: all 0.3s ease-in-out;
+  background: transparent !important;
+  z-index: 10;
+}
+
+.btn:hover {
+  border: 0.1rem solid #351f39;
+  color: #e798ae !important;
+}
+
+.btn::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  display: block;
+  background: #351f39;
+  position: absolute;
+  transform: skewX(-20deg);
+  left: -10%;
+  opacity: 1;
+  top: 0;
+  z-index: -12;
+  transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  box-shadow: 0.2rem 0rem 1.4rem rgba(0, 0, 0, 0.6);
+}
+
+.btn::after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  display: block;
+  background: #e798ae;
+  position: absolute;
+  transform: skewX(-20deg);
+  left: -10%;
+  opacity: 0;
+  top: 0;
+  z-index: -15;
+  transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+  box-shadow: 0.2rem 0rem 1.4rem rgba(0, 0, 0, 0.6);
+}
+
+.btn:hover::before,
+.btn:hover::before {
+  opacity: 1;
+  width: 116%;
+}
+
+.btn:hover::after,
+.btn:hover::after {
+  opacity: 1;
+  width: 120%;
+}
+
+.error-message {
+  margin: 10rem auto 0 auto;
+  height: 20rem;
+  width: 90%;
+  border-radius: 1rem;
+  box-shadow: 2rem 4rem 6rem rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 100;
+  font-size: 4rem;
+  background: #351f39;
+  animation: highlight 1s infinite;
+}
+
+@keyframes highlight {
+  0% {
+    color: #e7c3ce;
+  }
+  25%,
+  75% {
+    color: #e798ae;
+  }
+  75.1% {
+  }
+  87.5% {
+    color: #e7c3ce;
+  }
+}
+
+/* ------------------------------------------------------------ MEDIA QUERIES ------------------------------------------------------------*/
+
+@media only screen and (max-width: 56.25em) {
+  .currency-container {
+    margin-top: 10rem;
+    padding: 5rem 3rem;
+  }
+
+  .btn {
+    padding: 1.5rem 5rem;
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
+  .currency-container {
+    padding: 5rem 2rem;
+  }
+
+  .btn {
+    padding: 1.5rem 5rem;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .currency-container {
+    padding: 5rem 1rem;
+  }
+
+  .btn {
+    padding: 1rem 3rem;
+    letter-spacing: 0.1rem;
+  }
+}

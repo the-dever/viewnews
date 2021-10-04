@@ -1,0 +1,184 @@
+.blog-page {
+  width: 100%;
+  min-height: auto;
+  padding: 5rem;
+  background: linear-gradient(to bottom right, #3d262a, #2a0944);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ddd;
+  position: relative;
+  z-index: -1;
+}
+
+.blog-page > * {
+  margin-top: 3rem;
+}
+
+.blog-page > figure {
+  width: 100rem;
+  height: 50rem;
+}
+
+.blog-page > figure > img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+  border-radius: 1rem;
+  filter: sepia(50%) grayscale(20%);
+}
+
+.blog-page > div {
+  position: relative;
+}
+
+.blog-page > div > svg {
+  position: absolute;
+  left: -20%;
+  top: 20%;
+}
+
+.blog-page > div::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #aaa;
+  bottom: -2rem;
+  left: -50%;
+  width: 200%;
+  height: 0.1rem;
+}
+
+.blog-page > h3 {
+  margin-top: 5rem;
+  font-size: 4rem;
+  font-weight: 100;
+}
+
+.blog-page > p:first-of-type {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.blog-page > p:last-of-type {
+  line-height: 4rem;
+  border-top: 0.1rem solid #aaa;
+  font-size: 2rem;
+  font-weight: 100;
+  font-style: italic;
+  padding: 5rem;
+}
+
+.blog-page-bottom {
+  width: 100%;
+  height: 15rem;
+  background-color: #2a0944;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-page-bottom > button {
+  cursor: pointer;
+  border: 0.1rem solid #ddd;
+  outline: none;
+  background: none;
+  color: #ddd;
+  width: 50rem;
+  height: 5rem;
+  font-size: 1.6rem;
+  letter-spacing: 1rem;
+  transition: all 0.2s;
+}
+
+.blog-page-bottom > button:hover,
+.blog-page-bottom > button:active {
+  color: #ae99b3;
+  width: 45rem;
+  letter-spacing: 0.8rem;
+  border-radius: 2rem;
+  border: 0.1rem solid #ae99b3;
+}
+
+/* -------------------------------------------------- MEDIA QUERIES -------------------------------------------------- */
+
+@media only screen and (max-width: 64em) {
+  .blog-page {
+    padding: 3rem;
+  }
+
+  .blog-page > figure {
+    width: 60rem;
+    height: 50rem;
+  }
+
+  .blog-page > div::after {
+    left: -25%;
+    width: 150%;
+  }
+
+  .blog-page > h3 {
+    font-size: 3.5rem;
+  }
+
+  .blog-page > p:first-of-type {
+    font-size: 1.8rem;
+  }
+
+  .blog-page > p:last-of-type {
+    line-height: 3.5rem;
+    font-size: 1.8rem;
+    padding: 4rem;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .blog-page {
+    padding: 2rem;
+  }
+
+  .blog-page > figure {
+    width: 99%;
+    height: 40rem;
+  }
+
+  .blog-page > div > svg {
+    top: 30%;
+    left: -15%;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .blog-page > div::after {
+    left: 0%;
+    width: 100%;
+  }
+
+  .blog-page > h3 {
+    font-size: 3rem;
+  }
+
+  .blog-page > p:first-of-type {
+    font-size: 1.6rem;
+  }
+
+  .blog-page > p:last-of-type {
+    line-height: 3rem;
+    font-size: 1.6rem;
+    padding: 2rem;
+  }
+
+  .blog-page-bottom > button {
+    width: 30rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .blog-page-bottom > button:hover,
+  .blog-page-bottom > button:active {
+    width: 25rem;
+    letter-spacing: 0.1rem;
+  }
+}

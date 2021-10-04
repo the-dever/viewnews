@@ -1,0 +1,229 @@
+.addblog-container {
+  width: 80rem;
+  min-height: 140rem;
+}
+
+.addblog-form {
+  min-height: 140rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.addblog-form > div:not(:last-of-type) {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.addblog-img {
+  height: 8rem;
+}
+
+.addblog-title {
+  height: 8rem;
+}
+
+.addblog-description {
+  height: 10rem;
+}
+
+.addblog-text {
+  height: 80rem;
+}
+
+.addblog-form > div > label {
+  font-weight: bold;
+  letter-spacing: 1rem;
+}
+
+.addblog-title > input {
+  background: #112031;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  height: 5rem;
+  width: 100%;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.addblog-img > input {
+  background: #112031;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  height: 5rem;
+  width: 100%;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.addblog-description > textarea {
+  background: #112031;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  resize: none;
+  height: 7rem;
+  width: 100%;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.addblog-text > textarea {
+  background: linear-gradient(to bottom right, #112031e6, #112031e6),
+    url(https://images.unsplash.com/photo-1527345931282-806d3b11967f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);
+  background-position: center;
+  background-size: cover;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  resize: none;
+  height: 77rem;
+  width: 100%;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.addblog-form > div > input:focus,
+.addblog-form > div > textarea:focus {
+  box-shadow: 0 0 0.75rem 0.375rem #cccc, 0 0 1.25rem 0.75rem #aaa,
+    0 0 1.75rem 1.623rem #666;
+}
+
+.addblog-actions {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.addblog-actions > button {
+  height: 5rem;
+  width: 35rem;
+  color: #ccc;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto 5rem auto;
+  position: relative;
+  background: #334257;
+  border: 0.1rem solid #ccc;
+  box-shadow: 0rem 0.4rem 0 white, 0.4rem 0.8rem 1.2rem #ccc;
+  font-weight: 900;
+  letter-spacing: 1rem;
+  transition: all 0.2s linear;
+}
+
+.addblog-actions > button:hover,
+.addblog-actions > button:active {
+  background: #476072;
+  border: 0.1rem solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(255, 255, 255, 0.2);
+  color: #abc7db;
+  text-decoration: none;
+  text-shadow: -0.1rem -0.1rem 0 #136a65;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
+
+/* -------------------------------------------------- MEDIA QUERIES -------------------------------------------------- */
+
+@media only screen and (max-width: 64em) {
+  .addblog-container {
+    width: 50rem;
+  }
+
+  .addblog-img {
+    height: 7rem;
+  }
+
+  .addblog-title {
+    height: 7rem;
+  }
+
+  .addblog-description {
+    height: 9rem;
+  }
+
+  .addblog-text {
+    height: 70rem;
+  }
+
+  .addblog-title > input {
+    height: 4rem;
+    font-size: 1.6rem;
+  }
+
+  .addblog-img > input {
+    height: 4rem;
+    font-size: 1.6rem;
+  }
+
+  .addblog-description > textarea {
+    height: 6rem;
+    font-size: 1.6rem;
+  }
+
+  .addblog-text > textarea {
+    height: 67rem;
+    font-size: 1.6rem;
+  }
+
+  .addblog-actions > button {
+    height: 4.5rem;
+    width: 20rem;
+    margin: 0 auto 3rem auto;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .addblog-container {
+    width: 100vw;
+    min-height: 120rem;
+  }
+
+  .addblog-form {
+    min-height: 120rem;
+  }
+
+  .addblog-img {
+    padding: 0rem 2rem;
+  }
+
+  .addblog-title {
+    padding: 0rem 2rem;
+  }
+
+  .addblog-description {
+    padding: 0rem 2rem;
+  }
+
+  .addblog-text {
+    padding: 0rem 2rem;
+    height: 60rem;
+  }
+
+  .addblog-text > textarea {
+    height: 57rem;
+  }
+
+  .addblog-actions > button {
+    height: 4rem;
+    width: 16rem;
+  }
+}

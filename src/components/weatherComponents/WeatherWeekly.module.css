@@ -1,0 +1,191 @@
+.weather-weekly-container {
+  margin: 10rem 0rem;
+  padding: 5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 2rem 6rem 4rem rgba(0, 0, 0, 25%);
+  max-height: 500rem;
+  width: 80%;
+  background: linear-gradient(
+      to bottom right,
+      rgb(49, 37, 53, 0.9),
+      rgb(40, 20, 54, 0.9)
+    ),
+    url(https://images.unsplash.com/photo-1573491601995-695e5154f91b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80);
+  background-size: cover;
+  background-position: center;
+  color: #ae99b3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.weather-weekly-action {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.weather-weekly-action > h4 {
+  font-size: 4rem;
+  font-weight: 100;
+  border-bottom: 0.1rem solid #ae99b3;
+  letter-spacing: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.weather-weekly-action > button {
+  padding: 1rem 2rem;
+  font-weight: 100;
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: #281436;
+  color: #ae99b3;
+  border: 0 solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgb(174, 153, 179, 0.5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transform: skew(-10deg);
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.weather-weekly-action > button:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgb(174, 153, 179, 0.5),
+    0 0 20px rgb(174, 153, 179, 0.2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #ae99b3;
+}
+
+.weather-weekly-main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 7rem;
+}
+
+.weather-weekly-main-container::after {
+  display: block;
+  content: "";
+  background-color: #ae99b3;
+  margin-top: 6rem;
+  height: 0.2rem;
+  width: 70%;
+}
+
+.weather-weekly-main {
+  margin-top: 7rem;
+  width: 21%;
+  height: 32rem;
+  border: 0.3rem solid #ae99b3;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  transition: all 0.2s;
+}
+
+.weather-weekly-main:hover {
+  transform: translateY(-1rem);
+}
+
+.weather-weekly-icon {
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-weekly-icon > img {
+  border-radius: 1rem;
+  filter: invert(80%) sepia(1%) saturate(0%) hue-rotate(29deg) brightness(103%)
+    contrast(92%);
+}
+
+.weather-weekly-icon > p {
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.weather-weekly-temperature {
+  height: 45%;
+  width: 100%;
+  background-color: rgb(174, 153, 179, 0.5);
+  color: #281436;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  letter-spacing: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 900;
+}
+
+.weather-weekly-time > p {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+/* -------------------------------------------------- MEDIA QUERIES -------------------------------------------------- */
+
+@media only screen and (max-width: 88.75em) {
+  .weather-weekly-temperature {
+    letter-spacing: 0.17rem;
+  }
+}
+
+@media only screen and (max-width: 64em) {
+  .weather-weekly-container {
+    padding: 4rem 3rem;
+    width: 90%;
+  }
+
+  .weather-weekly-action > h4 {
+    font-size: 3.8rem;
+  }
+
+  .weather-weekly-main {
+    margin-top: 6rem;
+    width: 30%;
+  }
+
+  .weather-weekly-temperature {
+    padding: 1rem;
+    letter-spacing: 0.45rem;
+  }
+
+  .weather-weekly-time > p {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .weather-weekly-container {
+    padding: 4rem 1rem;
+    width: 100%;
+  }
+
+  .weather-weekly-action > h4 {
+    font-size: 2.75rem;
+    letter-spacing: 1rem;
+  }
+
+  .weather-weekly-main {
+    margin-top: 5rem;
+    width: 44%;
+    height: 33rem;
+  }
+
+  .weather-weekly-temperature {
+    padding: 1rem;
+    letter-spacing: 0.63rem;
+  }
+}

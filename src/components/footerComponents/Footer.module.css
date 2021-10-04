@@ -1,0 +1,234 @@
+footer {
+  margin-top: 5rem;
+  overflow-x: hidden;
+  height: 65rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  padding: 2rem 0rem 0rem 0rem;
+  box-shadow: 2rem 2rem 3rem rgb(0, 0, 0, 25%);
+  border-radius: 0.6rem;
+  height: 45rem;
+  width: 95rem;
+  background: linear-gradient(to bottom right, #331047, #290d3a);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer > div:first-child {
+  box-shadow: -2rem 2rem 3rem rgb(0, 0, 0, 25%);
+  border-radius: 0.5rem;
+  width: 20rem;
+  height: 20rem;
+  margin-top: -8rem;
+  background-color: #64007b;
+  transform: skew(10deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer > div:first-child > div {
+  box-shadow: -2rem 2rem 3rem rgb(0, 0, 0, 25%);
+  width: 15rem;
+  height: 15rem;
+  background-color: transparent;
+  border: 2rem solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer > div:first-child > div > p {
+  font-size: 5rem;
+  font-weight: 500;
+}
+
+.footer > div {
+  width: calc(100% - 35rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footer-prompt {
+  display: flex;
+  height: 4rem;
+  width: 100%;
+  border-radius: 5rem;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-prompt > p {
+  padding: 2rem;
+}
+
+.footer-prompt > button {
+  background: linear-gradient(to bottom right, #e2cce6, #ae99b3);
+  height: 100%;
+  border-radius: 5rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width: 15rem;
+}
+
+.footer-prompt > button > a,
+.footer-prompt > button > a:visited {
+  color: #331047;
+  text-decoration: none;
+  font-size: 1.8rem;
+  transition: all 0.2s;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  border-top: 1px solid #ccc;
+}
+
+.footer-links > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0rem 8rem 0rem 5rem;
+  height: 18rem;
+}
+
+.footer-links > div > a,
+.footer-links > div > a:visited {
+  color: #ddd;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.footer-links > div > a:hover,
+.footer-links > div > a:active {
+  transform: scale(1.5);
+  color: #f8e112;
+}
+
+.footer > p {
+  border-top: 1px solid #ccc;
+  padding-top: 2rem;
+}
+
+.footer > p > a,
+.footer > p > a:visited {
+  color: #eee;
+  margin-left: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.footer > p > a:hover,
+.footer > p > a:active {
+  color: #f8e112;
+}
+
+/* -------------------------------------------------- MEDIA QUERIES -------------------------------------------------- */
+
+@media only screen and (max-width: 64em) {
+  .footer {
+    width: 60rem;
+  }
+
+  .footer > div:first-child {
+    width: 15rem;
+    height: 15rem;
+    margin-top: -7rem;
+  }
+
+  .footer > div:first-child > div {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .footer > div:first-child > div > p {
+    font-size: 4rem;
+  }
+
+  .footer > div {
+    width: calc(100% - 25rem);
+  }
+
+  .footer-prompt {
+    height: 3.5rem;
+  }
+
+  .footer-prompt > p > span {
+    display: none;
+  }
+
+  .footer-prompt > button {
+    width: 13rem;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  .footer-links > div {
+    align-items: flex-start;
+  }
+
+  .footer-links > div > h3 {
+    width: 12rem;
+  }
+
+  .footer-links > div {
+    height: 17rem;
+  }
+
+  .footer > p {
+    margin: 0rem 4rem;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  footer {
+    height: 70rem;
+  }
+
+  .footer {
+    width: 37rem;
+    height: 50rem;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .footer > div:first-child {
+    width: 16rem;
+    height: 16rem;
+    align-self: center;
+  }
+
+  .footer > div {
+    padding: 0rem 2rem;
+    width: calc(100%);
+  }
+
+  .footer-links {
+    justify-content: center;
+    border: none;
+  }
+
+  .footer-links > div {
+    padding: 0rem 0rem 0rem 5rem;
+  }
+
+  .footer > p {
+    margin: 0rem 2rem 2rem 2rem;
+    font-size: 1.5rem;
+  }
+}

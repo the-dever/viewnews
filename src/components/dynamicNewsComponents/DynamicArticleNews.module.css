@@ -1,0 +1,7 @@
+.dynamic-article-news-container {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

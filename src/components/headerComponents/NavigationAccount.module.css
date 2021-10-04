@@ -1,0 +1,190 @@
+.nav-link {
+  list-style: none;
+  cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: #f8e112;
+  animation: wobble-bottom 1s;
+}
+
+.account-container {
+  color: #fff;
+  background: linear-gradient(to bottom right, #222, #111);
+  width: 100%;
+  padding: 0rem 2rem;
+  height: 10rem;
+  border-radius: 0 0 1rem 1rem;
+  position: absolute;
+  z-index: 100;
+  top: 95%;
+  right: 0%;
+  transform: skewX(10deg) scaleY(0);
+  transform-origin: top;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.nav-link:hover ~ .account-container,
+.nav-link:active ~ .account-container {
+  transform: skewX(10deg) scaleY(1);
+}
+
+.account-container:hover,
+.account-container:active {
+  transform: skewX(10deg) scaleY(1);
+}
+
+.account-container > p {
+  width: 61%;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.account-container > *:not(button) {
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #888;
+}
+
+.account-container > button {
+  height: 5rem;
+  width: 45%;
+  cursor: pointer;
+  padding: 1.5rem;
+  color: #ccc;
+  position: relative;
+  letter-spacing: 0.5rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 5rem;
+  overflow: hidden !important;
+  transition: all 0.3s ease-in-out;
+  background: transparent !important;
+  z-index: 10;
+}
+
+.account-container > button:hover,
+.account-container > button:active {
+  border: 0.1rem solid #351f39;
+  color: #bfa2db !important;
+}
+
+.account-container > button::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  display: block;
+  background: #351f39;
+  position: absolute;
+  transform: skewX(-20deg);
+  left: -10%;
+  opacity: 1;
+  top: 0;
+  z-index: -12;
+  transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  box-shadow: 0.2rem 0rem 1.4rem rgba(0, 0, 0, 0.6);
+}
+
+.account-container > button::after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  display: block;
+  background: #bfa2db;
+  position: absolute;
+  transform: skewX(-20deg);
+  left: -10%;
+  opacity: 0;
+  top: 0;
+  z-index: -15;
+  transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+  box-shadow: 0.2rem 0rem 1.4rem rgba(0, 0, 0, 0.6);
+}
+
+.account-container > button:hover::before,
+.account-container > button:active::before {
+  opacity: 1;
+  width: 116%;
+}
+
+.account-container > button:hover::after,
+.account-container > button:active::after {
+  opacity: 1;
+  width: 120%;
+}
+
+@keyframes wobble-bottom {
+  16.65% {
+    transform: skew(-24deg);
+  }
+
+  33.3% {
+    transform: skew(20deg);
+  }
+
+  49.95% {
+    transform: skew(-12deg);
+  }
+
+  66.6% {
+    transform: skew(8deg);
+  }
+
+  83.25% {
+    transform: skew(-4deg);
+  }
+
+  100% {
+    transform: skew(0);
+  }
+}
+
+/* -------------------------------------------------- MEDIA QUERIES -------------------------------------------------- */
+
+@media only screen and (max-width: 64em) {
+  .account-container {
+    width: 100%;
+    height: 8rem;
+  }
+
+  .account-container > button {
+    height: 3rem;
+    width: 40%;
+    padding: 0rem;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .account-container {
+    height: 7.5rem;
+  }
+
+  .account-container > button {
+    font-size: 1.6rem;
+  }
+
+  .account-container > button > svg {
+    margin-bottom: -0.24rem;
+  }
+}
+
+@media only screen and (max-width: 28.125em) {
+  .account-container {
+    height: 6rem;
+    font-size: 1.5rem;
+  }
+
+  .account-container > *:not(button) {
+    padding-bottom: 0rem;
+    border-bottom: none;
+  }
+
+  .account-container > button {
+    font-size: 1.5rem;
+    width: 47%;
+  }
+}

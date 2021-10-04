@@ -1,0 +1,32 @@
+.stocks-main-component {
+  overflow-x: hidden;
+  width: calc(100vw - 25rem);
+  max-height: 1000rem;
+  padding: 1rem 0rem 10rem 0rem;
+  border-radius: 0.5rem;
+  position: relative;
+  background: linear-gradient(
+    to bottom right,
+    rgb(255, 255, 255, 0.5),
+    rgb(238, 238, 238, 0.5)
+  );
+  box-shadow: 0 2rem 3rem rgb(0, 0, 0, 25%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------------------------------------- MEDIA QUERIES -------------------------------------------------- */
+
+@media only screen and (max-width: 64em) {
+  .stocks-main-component {
+    width: calc(100vw - 15rem);
+    padding: 1rem 0rem 5rem 0rem;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .stocks-main-component {
+    width: calc(100vw - 6rem);
+  }
+}

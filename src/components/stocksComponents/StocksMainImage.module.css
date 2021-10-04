@@ -1,0 +1,101 @@
+.white-bar {
+  overflow-x: hidden;
+  margin: 3rem 0rem -4rem 2rem;
+  height: 12rem;
+  width: 51rem;
+  box-shadow: 2rem 2rem 3rem rgb(0, 0, 0, 25%);
+  color: #111;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(to bottom right, #ddd, #fff);
+}
+
+.stocks-main-figure {
+  align-self: center;
+  width: 100%;
+  background-color: rgb(70, 70, 70, 0.7);
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.stocks-main-img {
+  width: 55rem;
+  height: auto;
+}
+
+.purple-bar {
+  align-self: flex-end;
+  margin: -4rem 2rem 0rem 0rem;
+  height: 12rem;
+  transform: skew(20deg);
+  width: 60rem;
+  box-shadow: 0 2rem 3rem rgb(0, 0, 0, 25%);
+  color: #111;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(to bottom right, #64007b, #3e1456);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.bar-text {
+  position: absolute;
+  top: -45%;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 17.5rem;
+  letter-spacing: -3rem;
+}
+
+.bar-text-purple {
+  color: #3e1456;
+}
+
+.bar-text-white {
+  color: #ccc;
+}
+
+/* -------------------------------------------------- MEDIA QUERIES -------------------------------------------------- */
+
+@media only screen and (max-width: 64em) {
+  .white-bar {
+    height: 8.5rem;
+    width: 34rem;
+  }
+
+  .stocks-main-img {
+    width: 40rem;
+  }
+
+  .purple-bar {
+    height: 8.5rem;
+    width: 38rem;
+  }
+
+  .bar-text {
+    font-size: 12.3rem;
+    letter-spacing: -2.5rem;
+  }
+}
+
+@media only screen and (max-width: 28em) {
+  .white-bar {
+    height: 6rem;
+    width: 23rem;
+  }
+
+  .stocks-main-img {
+    width: 33rem;
+  }
+
+  .purple-bar {
+    height: 6rem;
+    width: 26rem;
+  }
+
+  .bar-text {
+    font-size: 8.7rem;
+    letter-spacing: -2rem;
+  }
+}

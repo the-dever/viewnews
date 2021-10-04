@@ -1,0 +1,103 @@
+.stocks-chart-main {
+  border: 0.1rem solid #ccc;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.stocks-chart-main > *:not(:first-child) {
+  padding-left: 0.5rem;
+  border-left: 0.1rem solid #ccc;
+}
+
+.stocks-chart-main > * {
+  font-size: 2rem;
+  font-weight: 500;
+  width: 16.66666667%;
+}
+
+.stocks-chart-child {
+  margin-top: 1rem;
+  border: 0.1rem solid #ccc;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stocks-chart-child > *:not(:first-child) {
+  padding-left: 0.5rem;
+  border-left: 0.1rem solid #ccc;
+}
+
+.stocks-chart-child > * {
+  width: 16.66666667%;
+}
+
+.stocks-chart-high,
+.stocks-chart-close-green {
+  color: #7fc8a9;
+}
+
+.stocks-chart-low,
+.stocks-chart-close-red {
+  color: #ff6b6b;
+}
+
+.stocks-chart-volume {
+  font-weight: 900;
+}
+
+/* -------------------------------------------------- MEDIA QUERIES -------------------------------------------------- */
+
+@media only screen and (max-width: 64em) {
+  .stocks-chart-main > *:not(.stocks-chart-main-volume) {
+    width: 14.4%;
+  }
+
+  .stocks-chart-main-volume {
+    width: 28%;
+  }
+
+  .stocks-chart-child > *:not(.stocks-chart-volume) {
+    width: 14.4%;
+    font-size: 1.5rem;
+  }
+
+  .stocks-chart-volume {
+    width: 28%;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .stocks-chart-main > * {
+    font-size: 1.5rem;
+  }
+
+  .stocks-chart-main > *:not(.stocks-chart-main-volume) {
+    width: 14.2%;
+  }
+
+  .stocks-chart-main-volume {
+    width: 29%;
+  }
+
+  .stocks-chart-child {
+    align-items: center;
+  }
+
+  .stocks-chart-child > *:not(.stocks-chart-volume) {
+    width: 14.2%;
+    font-size: 1.3rem;
+  }
+
+  .stocks-chart-child > *:not(:first-child) {
+    padding-left: 0.3rem;
+  }
+
+  .stocks-chart-volume {
+    width: 29%;
+    font-size: 1.3rem;
+  }
+}

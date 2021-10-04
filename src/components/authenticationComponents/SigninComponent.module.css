@@ -1,0 +1,315 @@
+.signin-container {
+  overflow: hidden;
+  height: 70rem;
+  width: 95rem;
+  box-shadow: 2rem 6rem 4rem rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.signin-img {
+  border-radius: 1rem 1rem 0 0;
+  height: 45%;
+  width: 100%;
+  background: linear-gradient(
+      to bottom right,
+      rgba(100, 0, 123, 0.6),
+      rgba(100, 0, 123, 0.6)
+    ),
+    url(https://images.unsplash.com/photo-1608817618454-b0e9aef7a342?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1051&q=80);
+  background-size: cover;
+  background-position: center;
+  padding: 0 5rem;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #c3acc9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signin-form {
+  border-radius: 0 0 1rem 1rem;
+  height: 55%;
+  width: 100%;
+  background-color: #ae99b3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  color: #3e1456;
+  font-size: 2rem;
+}
+
+.signin-form > *:not(.btn-container, .form-last-text-container) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-heading {
+  width: 100%;
+  height: 10%;
+}
+
+.form-text {
+  padding-top: 1rem;
+  border-top: 0.1rem solid #3e1456;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.email-container > label {
+  font-size: 1.6rem;
+}
+
+.email-container,
+.password-container {
+  width: 45%;
+  height: 20%;
+  position: relative;
+}
+
+.email-container::after,
+.password-container::after {
+  display: block;
+  content: "";
+  height: 0.2rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to right, #3e1456 50%, #9f5f80);
+  transition: all 0.2s;
+}
+
+.password-container > label {
+  font-size: 1.6rem;
+}
+
+.email-container > input,
+.password-container > input {
+  outline: none;
+  border: none;
+  background: none;
+  position: relative;
+  padding: 1rem;
+  transition: all 0.2s;
+  color: #3e1456;
+}
+
+.email-container > input::placeholder,
+.password-container > input::placeholder {
+  letter-spacing: 1rem;
+  color: #9f5f80;
+  transition: all 0.2s;
+}
+
+.email-container > input:focus::placeholder,
+.password-container > input:focus::placeholder {
+  letter-spacing: 0.5rem;
+}
+
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-signin,
+.btn-redirect {
+  align-self: center;
+  color: #cccccc;
+  font-size: 1.6rem;
+  cursor: pointer;
+  width: 40%;
+  height: 5rem;
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  position: relative;
+  z-index: 1;
+  transition: all 0.2s;
+}
+
+.btn-signin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3e1456;
+}
+
+.btn-signin > svg {
+  margin-left: 0.5rem;
+}
+
+.btn-redirect {
+  background-color: #9f5f80;
+}
+
+.btn-signin::before,
+.btn-redirect::before {
+  content: "";
+  display: block;
+  background-color: #331047;
+  border-radius: 2rem;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  transition: all 0.2s;
+}
+
+.btn-signin::before {
+  background-color: #3e1456;
+}
+
+.btn-redirect::before {
+  background-color: #9f5f80;
+}
+
+.btn-signin:hover,
+.btn-signin:active,
+.btn-redirect:hover,
+.btn-redirect:active {
+  transform: translateY(-0.5rem) scale(1.04);
+  box-shadow: 0 1rem 4rem rgb(0 0 0 / 35%);
+}
+
+.btn-signin:hover::before,
+.btn-signin:active::before,
+.btn-redirect:hover::before,
+.btn-redirect:active::before {
+  transform: translate(-50%, -50%) scale(2);
+  opacity: 0;
+}
+
+.form-last-text-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 15%;
+  font-style: italic;
+  letter-spacing: 0.43rem;
+}
+
+.form-last-text-container > p {
+  font-style: italic;
+  letter-spacing: 0.6rem;
+  border-bottom: 0.1rem solid #3e1456;
+}
+
+/* -------------------------------------------------- MEDIA QUERIES -------------------------------------------------- */
+
+@media only screen and (max-width: 64em) {
+  .signin-container {
+    height: 60rem;
+    width: 63rem;
+  }
+
+  .signin-img {
+    height: 40%;
+    padding: 0 4rem;
+    font-size: 2.76rem;
+  }
+
+  .signin-form {
+    height: 60%;
+  }
+
+  .btn-signin,
+  .btn-redirect {
+    height: 4.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .signin-container {
+    height: 60rem;
+    width: 50rem;
+  }
+
+  .signin-img {
+    height: 35%;
+    padding: 0 2.5rem;
+    font-size: 2.25rem;
+  }
+
+  .signin-form {
+    height: 65%;
+  }
+
+  .email-container > input::placeholder,
+  .password-container > input::placeholder {
+    letter-spacing: 0.45rem;
+    font-size: 1.4rem;
+  }
+
+  .email-container > input:focus::placeholder,
+  .password-container > input:focus::placeholder {
+    letter-spacing: 0.15rem;
+  }
+
+  .btn-container {
+    flex-direction: column;
+  }
+
+  .btn-signin,
+  .btn-redirect {
+    width: 60%;
+    height: 4rem;
+    font-size: 1.5rem;
+  }
+
+  .btn-signin > svg {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .signin-container {
+    width: 40rem;
+  }
+
+  .signin-img {
+    height: 30%;
+    padding: 0 1.5rem;
+    font-size: 1.85rem;
+  }
+
+  .signin-form {
+    height: 70%;
+  }
+
+  .email-container,
+  .password-container {
+    width: 90%;
+    height: 15%;
+  }
+
+  .email-container > input::placeholder,
+  .password-container > input::placeholder {
+    letter-spacing: 1rem;
+    font-size: 1.6rem;
+  }
+
+  .email-container > input:focus::placeholder,
+  .password-container > input:focus::placeholder {
+    letter-spacing: 0.5rem;
+  }
+
+  .btn-signin,
+  .btn-redirect {
+    width: 70%;
+  }
+
+  .form-last-text-container > p {
+    font-size: 1.8rem;
+  }
+}

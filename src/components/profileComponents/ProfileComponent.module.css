@@ -1,0 +1,320 @@
+.profile-container {
+  padding: 5rem 0rem;
+  width: 100%;
+}
+
+.profile-bar-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-bar-container > div {
+  width: 35rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: 0.3rem solid #507a83;
+}
+
+.profile-bar-container > p {
+  margin-top: 1rem;
+  letter-spacing: 0.5rem;
+  font-style: italic;
+}
+
+.profile-info-container {
+  width: 80rem;
+  margin: 5rem auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.profile-info-container > *:not(:first-child) {
+  margin-top: 5rem;
+}
+
+.profile-info-container > h4 {
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
+  font-weight: 100;
+  margin-bottom: 2rem;
+}
+
+.profile-picture {
+  height: 30rem;
+  width: 25rem;
+  border-radius: 1rem;
+  border: 0.5rem solid #345b63;
+}
+
+.profile-picture > img {
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+  filter: sepia(50%) grayscale(30%);
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile-info-container > div:first-of-type {
+  height: 30rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.profile-info-container > div:first-of-type > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-info-container > div:first-of-type > div > p:first-of-type {
+  font-weight: bold;
+}
+
+.btn-edit {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-edit > button {
+  cursor: pointer;
+  letter-spacing: 0.5rem;
+  width: 25rem;
+  height: 5rem;
+  background: none;
+  border: 0.1rem solid #d4ecdd;
+  outline: none;
+  color: #d4ecdd;
+  transition: all 0.2s;
+}
+
+.btn-edit > button:hover,
+.btn-edit > button:active {
+  border-radius: 2rem;
+  letter-spacing: 0.7rem;
+}
+
+.btn-edit > button > svg {
+  margin: 0 0 -0.1rem 0.5rem;
+}
+
+.profile-password-form {
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  border-top: 0.1rem solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile-password-form > h5 {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.profile-password-form > input,
+.profile-password-form > div > button {
+  outline: none;
+  height: 5rem;
+  background: none;
+  border: 0.1rem solid #d4ecdd;
+  color: #d4ecdd;
+  padding: 1rem;
+  transition: all 0.2s;
+}
+
+.profile-password-form > input::placeholder {
+  color: #d4ecdd;
+}
+
+.profile-password-form > input {
+  width: 40rem;
+  letter-spacing: 1rem;
+}
+
+.profile-password-form > div > button {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  width: 20rem;
+  letter-spacing: 0.2rem;
+}
+
+.profile-password-form > input:active,
+.profile-password-form > input:focus,
+.profile-password-form > div > button:hover {
+  border-radius: 2rem;
+  text-shadow: 0.2rem 0.2rem #889eaf;
+}
+
+.message {
+  position: absolute;
+  bottom: -20%;
+  color: #d4ecdd;
+  transition: all 0.2s;
+  animation: wobble-horizontal 1s infinite;
+}
+
+.refresh-message {
+  position: absolute;
+  top: -1%;
+  font-size: 1.4rem;
+}
+
+@keyframes wobble-horizontal {
+  16.65% {
+    transform: translateX(4px);
+  }
+
+  33.3% {
+    transform: translateX(-3px);
+  }
+
+  49.95% {
+    transform: translateX(2px);
+  }
+
+  66.6% {
+    transform: translateX(-1px);
+  }
+
+  83.25% {
+    transform: translateX(0.5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* -------------------------------------------------- MEDIA QUERIES -------------------------------------------------- */
+
+@media only screen and (max-width: 56.25em) {
+  .profile-bar-container > div {
+    width: 30rem;
+  }
+
+  .profile-info-container {
+    width: 60rem;
+  }
+
+  .profile-picture {
+    height: 25rem;
+    width: 20rem;
+  }
+
+  .profile-info-container > div:first-of-type {
+    height: 25rem;
+    width: 25rem;
+  }
+
+  .btn-edit > button {
+    letter-spacing: 0.3rem;
+    width: 20rem;
+    height: 4.5rem;
+  }
+
+  .btn-edit > button:hover,
+  .btn-edit > button:active {
+    letter-spacing: 0.5rem;
+  }
+
+  .profile-password-form {
+    height: 15rem;
+  }
+
+  .profile-password-form > h5 {
+    font-size: 2.5rem;
+  }
+
+  .profile-password-form > input,
+  .profile-password-form > div > button {
+    height: 5rem;
+  }
+
+  .profile-password-form > input {
+    width: 35rem;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .profile-bar-container > div {
+    width: 27rem;
+  }
+  .profile-bar-container > p {
+    letter-spacing: 0.4rem;
+  }
+
+  .profile-info-container {
+    width: 39rem;
+  }
+
+  .profile-info-container > *:not(:first-child) {
+    margin-top: 3rem;
+  }
+
+  .profile-picture {
+    height: 20rem;
+    width: 12rem;
+  }
+
+  .profile-info-container > div:first-of-type {
+    height: 20rem;
+    width: 24rem;
+  }
+
+  .profile-info-container > div:first-of-type > div > p:last-of-type {
+    font-size: 1.3rem;
+  }
+
+  .btn-edit {
+    margin-bottom: 5rem;
+  }
+
+  .btn-edit > button {
+    letter-spacing: 0.1rem;
+    width: 18rem;
+    height: 4rem;
+  }
+
+  .btn-edit > button > svg {
+    margin: 0 0 -0.1rem 0.2rem;
+  }
+
+  .btn-edit > button:hover,
+  .btn-edit > button:active {
+    letter-spacing: 0.5rem;
+  }
+
+  .profile-password-form > input,
+  .profile-password-form > div > button {
+    height: 4rem;
+  }
+
+  .profile-password-form > input {
+    width: 20rem;
+    letter-spacing: 0.35rem;
+  }
+
+  .profile-password-form > div > button {
+    width: 17rem;
+    font-size: 1.5rem;
+    letter-spacing: 0rem;
+    padding: 0rem;
+  }
+
+  .refresh-message {
+    top: 3%;
+    font-size: 1.3rem;
+  }
+}

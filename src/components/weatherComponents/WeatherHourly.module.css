@@ -1,0 +1,192 @@
+.weather-hourly-widget {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: 2rem 6rem 4rem rgba(0, 0, 0, 25%);
+  margin-top: 10rem;
+  height: 45rem;
+  width: 80%;
+  background: linear-gradient(
+      to bottom right,
+      rgb(49, 37, 53, 0.9),
+      rgb(40, 20, 54, 0.9)
+    ),
+    url(https://images.unsplash.com/photo-1561484930-998b6a7b22e8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.weather-hourly-widget > h4 {
+  position: absolute;
+  top: 5%;
+  font-size: 4rem;
+  font-weight: 100;
+  border-bottom: 0.1rem solid #ccc;
+  letter-spacing: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.weather-hourly-container {
+  position: absolute;
+  left: 0;
+  bottom: 5%;
+  padding: 2rem;
+  height: 30rem;
+  width: 150%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-hourly-main {
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28rem;
+}
+
+.weather-hourly-temperature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-hourly-temperature > img {
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  filter: invert(80%) sepia(1%) saturate(0%) hue-rotate(29deg) brightness(103%)
+    contrast(92%);
+}
+
+.weather-hourly-temperature > p {
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.weather-hourly-temperature > p > svg {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+
+.weather-hourly-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weather-hourly-info > p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-hourly-time > p {
+  font-size: 3rem;
+  font-weight: 100;
+  text-align: center;
+}
+
+/* -------------------------------------------------- MEDIA QUERIES -------------------------------------------------- */
+
+@media only screen and (max-width: 90.625em) {
+  .weather-hourly-container {
+    width: 180%;
+  }
+}
+
+@media only screen and (max-width: 76em) {
+  .weather-hourly-container {
+    width: 220%;
+  }
+}
+
+@media only screen and (max-width: 64em) {
+  .weather-hourly-widget {
+    height: 43rem;
+    width: 90%;
+  }
+
+  .weather-hourly-widget > h4 {
+    font-size: 3.5rem;
+  }
+
+  .weather-hourly-container {
+    padding: 1rem;
+    height: 29rem;
+    width: 225%;
+  }
+
+  .weather-hourly-main {
+    height: 27rem;
+    width: 26rem;
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
+  .weather-hourly-container {
+    width: 280%;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .weather-hourly-widget {
+    width: 100%;
+    height: 55rem;
+  }
+
+  .weather-hourly-widget > h4 {
+    font-size: 3rem;
+  }
+
+  .weather-hourly-container {
+    width: 200%;
+    align-items: flex-end;
+  }
+
+  .weather-hourly-main {
+    width: 16rem;
+    height: 35rem;
+  }
+
+  .weather-hourly-temperature {
+    border-bottom: 0.1rem solid #ccc;
+  }
+
+  .weather-hourly-info {
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+
+  .weather-hourly-info > p {
+    letter-spacing: 0.09rem;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .weather-hourly-info > p > span {
+    margin-left: 1rem;
+  }
+
+  .weather-hourly-time {
+    padding-top: 0.5rem;
+    border-top: 0.1rem solid #ccc;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .weather-hourly-container {
+    width: 250%;
+  }
+}

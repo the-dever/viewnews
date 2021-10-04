@@ -1,0 +1,80 @@
+.section-weather-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.error-container {
+  background: linear-gradient(to bottom right, #654062, #4e3d53);
+  height: 30rem;
+  width: 80rem;
+  border-radius: 1rem;
+  box-shadow: 2rem 4rem 6rem rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #e7d9ea;
+  padding: 0 1rem;
+}
+
+.error-container > h3 {
+  font-size: 4rem;
+  font-weight: 100;
+  letter-spacing: 1rem;
+  border-bottom: 0.1rem solid #e7d9ea;
+}
+
+.error-container > p {
+  font-size: 2rem;
+  font-weight: 100;
+  letter-spacing: 0.5rem;
+}
+
+.error-container > a,
+.error-container > a:visited {
+  text-decoration: none;
+  display: inline-block;
+  width: 20rem;
+  height: 5rem;
+  border-radius: 3rem;
+  border: 0.5rem solid #e7d9ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #e7d9ea;
+  letter-spacing: 0.5rem;
+  transition: all 0.2s;
+}
+
+.error-container > a:hover,
+.error-container > a:active {
+  border: 0.5rem solid #301b3f;
+  color: #301b3f;
+  font-weight: bold;
+}
+
+/* -------------------------------------------------- MEDIA QUERIES -------------------------------------------------- */
+
+@media only screen and (max-width: 64em) {
+  .error-container {
+    width: 60rem;
+  }
+
+  .error-container > p {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .error-container {
+    width: 90vw;
+  }
+
+  .error-container > p {
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+  }
+}

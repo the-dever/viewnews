@@ -1,0 +1,213 @@
+.conversion-container {
+  position: relative;
+  min-height: 70rem;
+  margin-top: 9rem;
+  width: 100%;
+  background: linear-gradient(to bottom right, #3c2441e6, #351f39e6),
+    url(https://images.unsplash.com/photo-1502920514313-52581002a659?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1047&q=80);
+  border-radius: 0.5rem;
+  font-size: 3rem;
+  color: #ae99b3;
+  padding: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.conversion-container > h3 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.conversion-container > form {
+  height: 50rem;
+  border-radius: 1rem;
+  background: linear-gradient(
+    to bottom right,
+    rgba(136, 120, 139, 0.3),
+    rgba(147, 130, 151, 0.3)
+  );
+  box-shadow: 2rem 4rem 6rem rgba(0, 0, 0, 0.25);
+  width: 45rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.conversion-container > form > * {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.from-input {
+  width: 17rem;
+}
+
+.from-input > select {
+  border: none;
+  height: 3rem;
+  font-size: 1.6rem;
+  background-color: #ae99b3;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.to-input {
+  width: 15rem;
+}
+
+.to-input > select {
+  border: none;
+  height: 3rem;
+  font-size: 1.6rem;
+  background-color: #ae99b3;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.to-input > select::-webkit-scrollbar,
+.from-input > select::-webkit-scrollbar {
+  display: none;
+}
+
+.num-input {
+  width: 60%;
+}
+
+.num-input > input {
+  border: none;
+  height: 3rem;
+  width: 10rem;
+  padding: 1rem 0.5rem;
+  font-size: 2rem;
+  background-color: #ae99b3;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.from-input > select:focus,
+.to-input > select:focus,
+.num-input > input:focus {
+  outline-offset: 0.5rem;
+  outline: 0.2rem solid #ae99b3;
+  transform: scale(1.1);
+}
+
+.num-converted {
+  width: 41%;
+  height: 4rem;
+  font-style: italic;
+  border-bottom: 0.2rem solid #ae99b3;
+}
+
+.conversion-action {
+  width: 80%;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.conversion-action > button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 85%;
+  color: #ae99b3;
+  background-color: #351f39;
+  height: 4rem;
+  border-radius: 1rem;
+  border: 0.2rem solid;
+  transition: all 0.2s;
+}
+
+.btn-convert:hover,
+.btn-convert:active,
+.btn-switch:hover,
+.btn-switch:active {
+  letter-spacing: 1.5rem;
+  color: #351f39;
+  background-color: #ae99b3;
+  width: 100%;
+}
+
+.conversion-action > button > svg {
+  margin-bottom: -0.2rem;
+}
+
+.conversion-error-message {
+  margin-top: -8rem;
+  position: absolute;
+  width: 100%;
+  font-size: 1.6rem;
+  color: #ff6b6b;
+  animation: pulsate 1s infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes pulsate_mobile {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* ------------------------------------------------------------ MEDIA QUERIES ------------------------------------------------------------*/
+
+@media only screen and (max-width: 64em) {
+  .conversion-container {
+    min-height: 70rem;
+    font-size: 2.5rem;
+    padding: 5rem 3rem;
+  }
+
+  .conversion-container > h3 {
+    font-size: 2rem;
+  }
+
+  .conversion-container > form {
+    height: 45rem;
+    width: 40rem;
+  }
+}
+
+@media only screen and (max-width: 28.125em) {
+  .conversion-container {
+    min-height: 65rem;
+  }
+
+  .conversion-container > form {
+    width: 30rem;
+  }
+
+  .num-input {
+    width: 80%;
+  }
+
+  .btn-convert:hover,
+  .btn-convert:active,
+  .btn-switch:hover,
+  .btn-switch:active {
+    letter-spacing: 1rem;
+  }
+
+  .conversion-error-message {
+    margin-top: 0rem;
+    font-size: 1.2rem;
+    animation: pulsate_mobile 1s infinite;
+  }
+}

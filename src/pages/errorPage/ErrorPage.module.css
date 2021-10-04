@@ -1,0 +1,88 @@
+.section-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-error > div {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
+  background: linear-gradient(
+      to bottom right,
+      rgba(146, 134, 148, 0.9),
+      rgba(104, 92, 107, 0.9)
+    ),
+    url(https://images.unsplash.com/photo-1594322436404-5a0526db4d13?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1015&q=80);
+  background-size: cover;
+  background-position: center;
+  height: 50rem;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.section-error > div > p {
+  padding-bottom: 2rem;
+  text-align: center;
+  font-size: 4rem;
+  color: #3e1456;
+  border-bottom: 0.1rem solid #3e1456;
+}
+
+.section-error > div > a,
+.section-error > div > a:visited {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #3e1456;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.section-error > div > a:hover,
+.section-error > div > a:active {
+  color: #ae99b3;
+  text-shadow: 0.1rem 0.1rem 0 #ae99b3, 0.2rem 0.2rem 0 #581e7a,
+    0.3rem 0.3rem 0 #331047;
+  transform: translate(-0.5rem, -0.5rem);
+}
+
+/* -------------------------------------------------- MEDIA QUERIES -------------------------------------------------- */
+
+@media only screen and (max-width: 64em) {
+  .section-error > div {
+    height: 40rem;
+    width: 90%;
+  }
+
+  .section-error > div > p {
+    padding-bottom: 1rem;
+    text-align: justify;
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .section-error > div {
+    height: 20rem;
+    width: 95%;
+    justify-content: center;
+  }
+
+  .section-error > div > p {
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .section-error > div > a,
+  .section-error > div > a:visited {
+    margin-top: 1.5rem;
+    font-size: 2.5rem;
+  }
+
+  .section-error > div > a > svg {
+    margin-bottom: -0.3rem;
+  }
+}

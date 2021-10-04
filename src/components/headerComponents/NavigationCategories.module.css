@@ -1,0 +1,118 @@
+.categories-container {
+  border-radius: 0rem 0rem 1rem 1rem;
+  width: 100%;
+  padding: 0.5rem 3rem;
+  margin-left: -2rem;
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  background: linear-gradient(to bottom right, #222, #111);
+  display: flex;
+  flex-wrap: wrap;
+  transform: skewX(10deg) scaleY(0);
+  transform-origin: top;
+  transition: all 0.2s;
+}
+
+.nav-link {
+  list-style: none;
+  cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: #f8e112;
+  animation: wobble-bottom 1s;
+}
+
+.nav-link:hover ~ .categories-container,
+.nav-link:active ~ .categories-container {
+  transform: skewX(10deg) scaleY(1);
+}
+
+.categories-container:hover,
+.categories-container:active {
+  transform: skewX(10deg) scaleY(1);
+}
+
+.categories-container > a,
+.categories-container > a:visited {
+  width: 33%;
+  padding: 1rem;
+  color: #eee;
+  text-decoration: none;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+  display: flex;
+}
+
+.categories-container > a > * {
+  margin-right: 1rem;
+}
+
+.categories-container > a:hover,
+.categories-container > a:active {
+  transform: translateX(1rem);
+  color: #f8e112;
+}
+
+.categories-container > a > svg:last-of-type {
+  opacity: 0;
+  margin-left: 1rem;
+  transition: all 0.2s;
+}
+
+.categories-container > a:hover > svg:last-of-type {
+  opacity: 1;
+}
+
+@keyframes wobble-bottom {
+  16.65% {
+    transform: skew(-24deg);
+  }
+
+  33.3% {
+    transform: skew(20deg);
+  }
+
+  49.95% {
+    transform: skew(-12deg);
+  }
+
+  66.6% {
+    transform: skew(8deg);
+  }
+
+  83.25% {
+    transform: skew(-4deg);
+  }
+
+  100% {
+    transform: skew(0);
+  }
+}
+
+/* -------------------------------------------------- MEDIA QUERIES -------------------------------------------------- */
+
+@media only screen and (max-width: 64em) {
+  .categories-container {
+    justify-content: space-between;
+    padding: 0 0 0 3rem;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .categories-container {
+    top: 80%;
+  }
+}
+
+@media only screen and (max-width: 29.375em) {
+  .categories-container {
+    left: 4%;
+    padding: 0;
+    top: 65%;
+  }
+}

@@ -1,0 +1,363 @@
+.currency-overview {
+  min-height: 40rem;
+  margin-top: 9rem;
+  width: 100%;
+  background: linear-gradient(to bottom right, #3c2441, #351f39);
+  border-radius: 0.5rem;
+  color: #ae99b3;
+  padding: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.currency-overview-flag {
+  border-bottom: 0.1rem solid #ae99b3;
+  padding-bottom: 1rem;
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.currency-overview-flag > img {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  filter: sepia(60%) grayscale(20%);
+}
+
+.currency-overview-flag > h2 {
+  letter-spacing: 1rem;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.currency-overview-flag > h2 > span {
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.currency-overview-main {
+  display: flex;
+  width: 100%;
+  min-height: 100rem;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.currency-overview-main > div {
+  margin: 5rem 2rem 2rem 2rem;
+  width: 26%;
+  padding: 0 1rem;
+  height: 40rem;
+  border-radius: 1rem;
+  background: linear-gradient(to bottom right, #88788b, #948397);
+  color: #331047;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.currency-overview-main > div:hover {
+  transform: translateY(-1rem);
+}
+
+.currency-overview-main img {
+  border-radius: 50%;
+  height: 17rem;
+  width: 17rem;
+  filter: sepia(60%) grayscale(20%);
+}
+
+.currency-overview-main > div > h1 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.currency-overview-main > div > p {
+  transform: skew(-10deg);
+  display: inline-block;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border: 0.1rem solid #331047;
+  border-radius: 6rem;
+}
+
+.currency-overview-action {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.currency-overview-action > button {
+  font-size: 1.6rem;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  padding: 1.5rem 5rem;
+  margin: 1rem 0.4rem;
+  color: #ae99b3;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.currency-overview-action > button::before,
+.currency-overview-action > button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.2rem;
+  background: #ae99b3;
+  display: block;
+  transform: scale(0, 1);
+  transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+}
+
+.currency-overview-action > button::before {
+  bottom: 0%;
+  left: 0rem;
+  transform-origin: right top;
+}
+
+.currency-overview-action > button:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.currency-overview-action > button::after {
+  top: 0%;
+  left: 0rem;
+  transform-origin: left top;
+}
+
+.currency-overview-action > button:hover::after {
+  transform-origin: right top;
+  transform: scale(1, 1);
+}
+
+.currency-overview-input {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 0.2rem solid #ae99b3;
+  padding: 1rem;
+  transform: skew(-10deg);
+}
+
+.currency-overview-input > p {
+  transform: skew(10deg);
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+.currency-overview-input > input {
+  margin-left: 1rem;
+  color: #ae99b3;
+  font-size: 1.6rem;
+  width: 40rem;
+  height: 3rem;
+  border-radius: 5rem;
+  padding: 1.5rem;
+  outline: none;
+  border: none;
+  transform: skew(10deg);
+}
+
+.currency-overview-input > input::placeholder {
+  color: #ae99b3;
+}
+
+.currency-overview-input > input:focus {
+  border: 0.3rem solid #ae99b3;
+}
+
+.currency-overview-all {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.currency-overview-all > div {
+  width: 26%;
+  display: flex;
+  justify-content: center;
+}
+
+.currency-overview-all > div > p {
+  margin-top: 5rem;
+  transform: skew(-10deg);
+  display: inline-block;
+  font-size: 2rem;
+  padding: 0 1rem 0.5rem 0;
+  border-bottom: 0.1rem solid #ae99b3;
+  border-right: 0.1rem solid #ae99b3;
+}
+
+.currency-overview-all > div > p > span {
+  margin-right: 0.5rem;
+}
+
+/* -------------------------------------------------- MEDIA QUERIES -------------------------------------------------- */
+
+@media only screen and (max-width: 75em) {
+  .currency-overview-main img {
+    height: 13rem;
+    width: 13rem;
+  }
+
+  .currency-overview-main > div {
+    height: 30rem;
+  }
+
+  .currency-overview-main > div > h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 64em) {
+  .currency-overview {
+    padding: 4rem 2rem;
+  }
+
+  .currency-overview-main {
+    min-height: 40rem;
+    margin: 2rem 0;
+  }
+
+  .currency-overview-main > div {
+    margin: 2rem 0.5rem;
+    width: 20rem;
+    height: 16rem;
+    border-radius: 0.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .currency-overview-main img {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .currency-overview-main > div > h1 {
+    font-size: 2rem;
+    border-bottom: 0.1rem solid #331047;
+  }
+
+  .currency-overview-main > div > p {
+    width: 90%;
+    border-radius: 1rem;
+  }
+
+  .currency-overview-input {
+    height: 15rem;
+    flex-direction: column;
+  }
+
+  .currency-overview-input > p {
+    font-size: 2.6rem;
+  }
+
+  .currency-overview-input > input {
+    width: 35rem;
+  }
+
+  .currency-overview-all > div {
+    width: 25%;
+    margin: 0 1rem;
+  }
+
+  .currency-overview-all > div > p {
+    font-size: 1.6rem;
+    padding: 0 0.5rem 0.2rem 0;
+  }
+}
+
+@media only screen and (max-width: 42em) {
+  .currency-overview-main > div {
+    width: 90%;
+    height: 16rem;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .currency-overview {
+    padding: 4rem 1rem;
+  }
+
+  .currency-overview-main {
+    min-height: 40rem;
+    margin: 2rem 0;
+  }
+
+  .currency-overview-main > div {
+    width: 20rem;
+    height: 11rem;
+  }
+
+  .currency-overview-main img {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .currency-overview-main > div > h1 {
+    font-size: 1.6rem;
+  }
+
+  .currency-overview-main > div > p {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 29.375em) {
+  .currency-overview-main > div {
+    width: 97%;
+    height: 7rem;
+    margin-top: 0;
+  }
+
+  .currency-overview-main > div > p {
+    width: 20%;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  .currency-overview-action > button {
+    font-size: 1.5rem;
+    padding: 1.5rem 3.4rem;
+  }
+
+  .currency-overview-input {
+    transform: skew(0deg);
+    height: 13rem;
+    flex-direction: column;
+  }
+
+  .currency-overview-input > p {
+    transform: skew(0deg);
+    font-size: 2rem;
+  }
+
+  .currency-overview-input > input {
+    transform: skew(0deg);
+    width: 25rem;
+  }
+
+  .currency-overview-all > div {
+    width: 25%;
+    margin: 0 1.5rem;
+  }
+
+  .currency-overview-all > div > p {
+    font-size: 1.5rem;
+  }
+}
