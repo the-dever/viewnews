@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import { firebaseProjectId } from "../../context/keys";
 
 import classes from "./ProfileForm.module.css";
 
@@ -30,7 +31,7 @@ const ProfileForm = (props) => {
 
     try {
       const response = await fetch(
-        `https://task-a3688-default-rtdb.firebaseio.com/${props.userId}/userInfo.json`,
+        `https://${firebaseProjectId}.com/${props.userId}/userInfo.json`,
         {
           method: "POST",
           body: JSON.stringify({

@@ -7,6 +7,7 @@ import { edit } from "../../UI/svgs/icons";
 import classes from "./ProfileComponent.module.css";
 import { motion } from "framer-motion";
 import { AuthContext } from "../../context/auth-context";
+import { firebaseKey } from "../../context/keys";
 
 const containerVariants = {
   hidden: {},
@@ -69,9 +70,8 @@ const ProfileComponent = (props) => {
     e.preventDefault();
     setIsLoading(true);
     const enteredNewPassword = newPasswordInputRef.current.value;
-
     fetch(
-      "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyCmbR7YWNV5wURfEe9SgpbL4-MLwR5QzMg",
+      `https://identitytoolkit.googleapis.com/v1/accounts:update?key=${firebaseKey}`,
       {
         method: "POST",
         body: JSON.stringify({

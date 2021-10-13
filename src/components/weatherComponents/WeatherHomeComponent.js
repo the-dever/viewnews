@@ -3,6 +3,7 @@ import WeatherWidget from "./WeatherWidget";
 import WeatherSearch from "./WeatherSearch";
 import Loader from "../../UI/Loader";
 import classes from "./WeatherHomeComponent.module.css";
+import { geoKey, weatherKey } from "../../context/keys";
 
 const WeatherHomeComponent = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -19,7 +20,7 @@ const WeatherHomeComponent = () => {
       (pos) => {
         const { latitude, longitude } = pos.coords;
         fetch(
-          `https://api.geoapify.com/v1/geocode/reverse?lat=${latitude}&lon=${longitude}&apiKey=5b6d41edac00451b91b336f2f72967c4`
+          `https://api.geoapify.com/v1/geocode/reverse?lat=${latitude}&lon=${longitude}&apiKey=${geoKey}`
         )
           .then((res) => {
             if (!res || !res.ok) throw new Error("Failed to get your location");
@@ -47,7 +48,7 @@ const WeatherHomeComponent = () => {
         setIsLoading(true);
         try {
           const response = await fetch(
-            `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${currentCity}?unitGroup=metric&key=5BBHTMCZZZB2KXMSASWKZ3UVE`
+            `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${currentCity}?unitGroup=metric&key=${weatherKey}`
           );
           if (!response || !response.ok)
             throw new Error("Weather data cannot be found");

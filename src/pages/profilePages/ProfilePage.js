@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 import BlogComponent from "../../components/profileComponents/BlogComponent";
 import ProfileComponent from "../../components/profileComponents/ProfileComponent";
+import { firebaseProjectId } from "../../context/keys";
 import Loader from "../../UI/Loader";
 import classes from "./ProfilePage.module.css";
 
@@ -14,7 +15,7 @@ const ProfilePage = () => {
   const userInfoRequest = useCallback(async () => {
     setLoading(true);
     const response = await fetch(
-      `https://task-a3688-default-rtdb.firebaseio.com/${userId}/userInfo.json`
+      `https://${firebaseProjectId}.com/${userId}/userInfo.json`
     );
     const data = await response.json();
     setLoading(false);

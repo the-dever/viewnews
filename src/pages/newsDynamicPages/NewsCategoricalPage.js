@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import DynamicArticleNews from "../../components/dynamicNewsComponents/DynamicArticleNews";
 import classes from "./NewsCategoricalPage.module.css";
 import Loader from "../../UI/Loader";
+import { newsKey } from "../../context/keys";
 
 const headingVariants = {
   hidden: {
@@ -32,7 +33,7 @@ const NewsCategoricalPage = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          `https://api.nytimes.com/svc/topstories/v2/${params.id}.json?api-key=qG6RRT9MwAcAaiFgtc1v7QKcS1A2MkkP`
+          `https://api.nytimes.com/svc/topstories/v2/${params.id}.json?api-key=${newsKey}`
         );
         if (!response || !response.ok)
           throw new Error("News data cannot be found");

@@ -5,6 +5,7 @@ import { glasses, network, pen, search } from "../../UI/svgs/icons";
 import Loader from "../../UI/Loader";
 
 import classes from "./HomeComponent.module.css";
+import { newsKey } from "../../context/keys";
 
 const containerVariants = {
   hidden: {
@@ -47,7 +48,7 @@ const HomeComponent = () => {
       setLoading(true);
       try {
         const res = await fetch(
-          `https://api.nytimes.com/svc/topstories/v2/world.json?api-key=qG6RRT9MwAcAaiFgtc1v7QKcS1A2MkkP`
+          `https://api.nytimes.com/svc/topstories/v2/world.json?api-key=${newsKey}`
         );
         if (!res.ok || !res) throw new Error("News data cannot be found.");
         const data = await res.json();
@@ -75,7 +76,7 @@ const HomeComponent = () => {
     setLoading(true);
     try {
       const response = await fetch(
-        `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchInputRef.current.value}&api-key=qG6RRT9MwAcAaiFgtc1v7QKcS1A2MkkP`
+        `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchInputRef.current.value}&api-key=${newsKey}`
       );
       if (!response.ok || !response)
         throw new Error("News data cannot be found.");

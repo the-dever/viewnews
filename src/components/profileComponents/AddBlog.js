@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 
 import classes from "./AddBlog.module.css";
+import { firebaseProjectId } from "../../context/keys";
 
 const containerVariants = {
   hidden: { x: "-100vw" },
@@ -28,7 +29,7 @@ const AddBlog = (props) => {
 
     try {
       const response = await fetch(
-        `https://task-a3688-default-rtdb.firebaseio.com/${props.userId}/blogs.json`,
+        `https://${firebaseProjectId}.com/${props.userId}/blogs.json`,
         {
           method: "POST",
           body: JSON.stringify({

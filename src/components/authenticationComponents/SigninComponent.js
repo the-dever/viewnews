@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { arrowRight } from "../../UI/svgs/icons";
 
 import classes from "./SigninComponent.module.css";
+import { firebaseKey } from "../../context/keys";
 
 const containerVariants = {
   hidden: { x: "100vw" },
@@ -47,7 +48,7 @@ const SigninComponent = () => {
     const enteredPassword = passwordInputRef.current.value;
 
     authCtx.postSignupSigninRequest(
-      "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCmbR7YWNV5wURfEe9SgpbL4-MLwR5QzMg",
+      `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${firebaseKey}`,
       enteredEmail,
       enteredPassword
     );

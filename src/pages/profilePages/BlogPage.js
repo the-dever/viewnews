@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router";
+import { firebaseProjectId } from "../../context/keys";
 import Loader from "../../UI/Loader";
 import { time } from "../../UI/svgs/icons";
 import classes from "./BlogPage.module.css";
@@ -30,7 +31,7 @@ const ProfilePage = () => {
       try {
         setLoading(true);
         const response = await fetch(
-          `https://task-a3688-default-rtdb.firebaseio.com/${userId}/blogs/${blogId}.json`
+          `https://${firebaseProjectId}.com/${userId}/blogs/${blogId}.json`
         );
         const data = await response.json();
         setLoading(false);

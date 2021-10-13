@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import WeatherBigWidget from "../../components/weatherComponents/WeatherBigWidget";
 import WeatherHourly from "../../components/weatherComponents/WeatherHourly";
 import WeatherWeekly from "../../components/weatherComponents/WeatherWeekly";
+import { weatherKey } from "../../context/keys";
 import Loader from "../../UI/Loader";
 
 import classes from "./WeatherDetails.module.css";
@@ -24,7 +25,7 @@ const WeatherDetails = () => {
       try {
         setIsLoading(true);
         const response = await fetch(
-          `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${params.id}?unitGroup=metric&key=5BBHTMCZZZB2KXMSASWKZ3UVE`
+          `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${params.id}?unitGroup=metric&key=${weatherKey}`
         );
         if (!response.ok || !response)
           throw new Error("City Data Cannot be Found");
@@ -41,7 +42,7 @@ const WeatherDetails = () => {
       try {
         setIsLoading(true);
         const response = await fetch(
-          `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${params.id}?unitGroup=metric&aggregateHours=24&key=5BBHTMCZZZB2KXMSASWKZ3UVE&include=fcst%2Chours`
+          `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${params.id}?unitGroup=metric&aggregateHours=24&key=${weatherKey}&include=fcst%2Chours`
         );
         if (!response.ok || !response)
           throw new Error("Hourly Data Cannot be Found");

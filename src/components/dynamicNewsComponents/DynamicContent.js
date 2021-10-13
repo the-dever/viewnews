@@ -26,7 +26,6 @@ const imgSrc =
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
 const DynamicContent = (props) => {
-  console.log(props.currentPosts);
   if (props.currentPosts.length === 0) props.paginate(1);
   return props.currentPosts.map((data, i) => {
     return (

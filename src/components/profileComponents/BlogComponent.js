@@ -9,6 +9,7 @@ import { remove } from "../../UI/svgs/icons";
 import classes from "./BlogComponent.module.css";
 import AddBlog from "./AddBlog";
 import Loader from "../../UI/Loader";
+import { firebaseProjectId } from "../../context/keys";
 
 const containerVariants = {
   hidden: { scale: 0 },
@@ -67,16 +68,13 @@ const BlogComponent = (props) => {
     const id = e.target.closest("button").id;
     console.log(id);
 
-    await fetch(
-      `https://task-a3688-default-rtdb.firebaseio.com/${userId}/blogs/${id}.json`,
-      {
-        method: "DELETE",
-        body: JSON.stringify(),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    await fetch(`https://${firebaseProjectId}.com/${userId}/blogs/${id}.json`, {
+      method: "DELETE",
+      body: JSON.stringify(),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     window.location.reload();
   };
 

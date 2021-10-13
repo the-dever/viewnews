@@ -7,6 +7,7 @@ import StocksChart from "./StocksChart";
 
 import classes from "./StocksContainer.module.css";
 import StocksTable from "./StocksTable";
+import { stocksKey } from "../../context/keys";
 
 const childVariants = {
   hidden: {
@@ -46,7 +47,7 @@ const StocksContainer = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${searchInputRef.current.value}&apikey=EK03CLS1L9EIUY3R.`
+        `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${searchInputRef.current.value}&apikey=${stocksKey}.`
       );
       if (!response.ok) throw new Error("Stocks Data Cannot be Found");
       const data = await response.json();
@@ -68,7 +69,7 @@ const StocksContainer = () => {
       try {
         setIsLoading(true);
         const response = await fetch(
-          `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=AMZN&apikey=EK03CLS1L9EIUY3R.`
+          `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=AMZN&apikey=${stocksKey}.`
         );
         if (!response.ok) throw new Error("Stocks Data Cannot be Found");
         const data = await response.json();

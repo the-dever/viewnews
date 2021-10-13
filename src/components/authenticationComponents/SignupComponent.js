@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useContext, useRef } from "react";
 import { AuthContext } from "../../context/auth-context";
 import { HelperContext } from "../../context/helper-context";
+import { firebaseKey } from "../../context/keys";
 import Loader from "../../UI/Loader";
 
 import classes from "./SignupComponent.module.css";
@@ -47,7 +48,7 @@ const SignupComponent = () => {
     const enteredPassword = passwordInputRef.current.value;
 
     authCtx.postSignupSigninRequest(
-      `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCmbR7YWNV5wURfEe9SgpbL4-MLwR5QzMg`,
+      `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${firebaseKey}`,
       enteredEmail,
       enteredPassword
     );
